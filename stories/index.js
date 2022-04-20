@@ -97,10 +97,9 @@ storiesOf("DayListItem", module)
       ))
       .add("Clickable", () => (
         <InterviewerListItem
-          id={interviewer.id}
           name={interviewer.name}
           avatar={interviewer.avatar}
-          setInterviewer={action("setInterviewer")}
+          setInterviewer={() => action("setInterviewer")(interviewer.id)}
         />
       ));
     
@@ -124,7 +123,7 @@ storiesOf("DayListItem", module)
         .add("Selected", () => (
           <InterviewerList
             interviewers={interviewers}
-            id={3}
+            interviewer={3}
           />
         ))
         .add("Clickable", () => (

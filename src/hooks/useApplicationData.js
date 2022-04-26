@@ -37,8 +37,18 @@ export default function useApplicationData(initial) {
       [id]: appointment
     };
 
+    const spotsLeft = () => {
+      state.days.map(day => {
+        if (state.day === day.name) {
+          day.spots--;
+        }
+        return day;
+      })      
+    }
+
     return axios.put(`/api/appointments/${id}`, {interview})
-      .then(setState({...state, appointments}));
+      .then(setState({...state, appointments}))
+      .then(spotsLeft());
   }
 
   //delete existing interview
@@ -52,8 +62,18 @@ export default function useApplicationData(initial) {
       [id]: appointment
     };
 
+    const spotsLeft = () => {
+      state.days.map(day => {
+        if (state.day === day.name) {
+          day.spots++;
+        }
+        return day;
+      })      
+    }
+
     return axios.delete(`/api/appointments/${id}`)
-    .then(setState({...state, appointments}));
+    .then(setState({...state, appointments}))
+    .then(spotsLeft());
   }
 
   return { state, setDay, bookInterview, cancelInterview };

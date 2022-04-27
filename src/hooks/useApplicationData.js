@@ -47,7 +47,7 @@ export default function useApplicationData(initial) {
     }
 
     return axios.put(`/api/appointments/${id}`, {interview})
-      .then(setState({...state, appointments}))
+      .then(() => setState({...state, appointments}))
       .then(spotsLeft());
   }
 
@@ -72,7 +72,7 @@ export default function useApplicationData(initial) {
     }
 
     return axios.delete(`/api/appointments/${id}`)
-    .then(setState({...state, appointments}))
+    .then(() => setState({...state, appointments}))
     .then(spotsLeft());
   }
 

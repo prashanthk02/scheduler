@@ -55,7 +55,9 @@ npm run cypress
 ## Stack
 
 Front-End: React, Axios, JavaScript, JSX, HTML, SASS
+
 Back-End: Node.js, PostgreSQL
+
 Testing: Storybook, Jest, Testing library, Cypress
 
 ## Dependencies

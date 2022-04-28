@@ -43,6 +43,14 @@ npm run cypress
 ```
 
 ## Screenshots
+!["Appointment creation form"](https://github.com/prashanthk02/scheduler/blob/master/docs/Form.png?raw=true)
+
+!["Error while saving appointment without filling required fields"](https://github.com/prashanthk02/scheduler/blob/master/docs/Error.png?raw=true)
+
+!["Show edit and delete option on hover"](https://github.com/prashanthk02/scheduler/blob/master/docs/Hover-view.png?raw=true)
+
+!["Confirm before deleting"](https://github.com/prashanthk02/scheduler/blob/master/docs/Confirmation.png?raw=true)
+
 
 ## Stack
 
